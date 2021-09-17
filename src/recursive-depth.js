@@ -1,5 +1,6 @@
 import { NotImplementedError } from '../extensions/index.js';
 
+//Complete
 /**
  * Implement class DepthCalculator with method calculateDepth
  * that calculates deoth of nested array
@@ -13,8 +14,17 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default class DepthCalculator {
-  calculateDepth(/* arr */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  calculateDepth(arr) {
+    let arrResult = 1
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === 'object') {
+        arrResult += this.calculateDepth(arr.flat())
+        break;
+      }
+    }
+    return arrResult
   }
-}
+  
+  }
+
+

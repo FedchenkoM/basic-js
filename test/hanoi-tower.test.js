@@ -3,7 +3,6 @@ import { testOptional } from '../extensions/index.js';
 import calculateHanoi from '../src/hanoi-tower.js';
 
 it.optional = testOptional;
-
 Object.freeze(expect);
 Object.freeze(assert);
 
