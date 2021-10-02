@@ -1,5 +1,7 @@
 import { NotImplementedError } from '../extensions/index.js';
 
+//complete
+
 /**
  * Given a string, return its encoding version.
  *
